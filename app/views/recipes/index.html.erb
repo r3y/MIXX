@@ -1,0 +1,17 @@
+<div class="container">
+	<div class="row">
+		<h1>Recipes</h1>
+	</div>
+
+	<div class="row">
+		<% @foods.each do |food| %>
+			<div class="col xs6">
+				<h4><%= food.title %></h4>
+				<p><%= food.image %></p>
+				<p><%= food.description %></p>
+				
+			</div>
+		<% end %>
+	</div>
+</div>
+

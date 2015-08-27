@@ -1,0 +1,15 @@
+<div class="container">
+	<div class="row">
+		<h1>CRAVE</h1>
+		<h5>Answering that perpetual question, What's for dinner?</h5>
+	</div>
+
+	<div class="row">
+		<% @flavors.each do |flavor| %>
+			<div class="col xs6">
+				<h4><%= flavor.title %></h4>
+				<p><%= flavor.description %></p>
+			</div>
+		<% end %>
+	</div>
+</div>

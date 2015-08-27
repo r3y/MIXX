@@ -1,0 +1,16 @@
+.container
+	.row
+		.col.xs12
+			%img= @food.image
+			%h2= @food.title
+			%p= @food.description
+	.row
+		.col.xs6
+			%h2= @food.title
+			%ul
+				%li= @food.instructions
+				
+		.col.xs6
+			%p= @food.ingredients
+			
+
