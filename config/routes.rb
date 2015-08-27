@@ -3,6 +3,6 @@ Rails.application.routes.draw do
   resources :categories
   resources :recipes
 
-  root 'categories#index'
+  root 'welcome#index'
 
 end
