@@ -13,7 +13,7 @@ class RecipesController < ApplicationController
 	end
 
 	def create
-
+		@category = Category.find(params[:id])
 		@food = Recipe.new(recipe_params)
 
 		if @food.save
@@ -22,6 +22,9 @@ class RecipesController < ApplicationController
 			render 'new'
 		end
 
+		
+
+		
 	end
 
 	def edit

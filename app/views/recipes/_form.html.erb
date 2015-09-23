@@ -1,9 +1,18 @@
+<p>Add a recipe to the category: <%= @category.title %></p>
+
+
 <%= form_for @food do |f| %>
 	Title: <%= f.text_field :title %>
 	Description: <%= f.text_field :description %>
+	
 	Image: <%= f.text_field :image %>
 	Ingredients: <%= f.text_field :ingredients %>
 	Instructions: <%= f.text_field :instructions %>
-	<%= f.submit %>
+
+<%= f.submit %>
 <% end %>
+
+
+	
+    
 

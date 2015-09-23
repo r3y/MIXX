@@ -11,7 +11,7 @@ Category.create(title:'Green Machine', image: 'https://kalamazoogourmet.com/imag
 Category.create(title: 'Make Love', image: 'http://images.food52.com/I9SoReTdjbza2FuXGKOtsUWvWKo=/753x502/0afceb53-8c13-4b96-82ba-45235cf98176--fishpastalowres_2417.JPG')
 Category.create(title: 'Sweet Tooth', image: 'http://theartmad.com/wp-content/uploads/2015/08/Chocolate-Cupcake-Wallpaper-2.jpg')
 Category.create(title: 'Munchies', image: 'http://www.create-eats.com/wp-content/uploads/2012/05/bison_chorizo_poppers1.jpg')
-Category.create(title: 'Bubeling Betties', image: 'http://search.chow.com/thumbnail/1600/0/www.chowstatic.com/assets/recipe_photos/30965_slushy_dark_and_stormy.jpg')
+Category.create(title: 'Bubbeling Betties', image: 'http://search.chow.com/thumbnail/1600/0/www.chowstatic.com/assets/recipe_photos/30965_slushy_dark_and_stormy.jpg')
 Category.create(title: 'Chef Watson', image: 'http://www.discoveryventura.com/wp-content/uploads/2014/01/pizza.png')
 
 
