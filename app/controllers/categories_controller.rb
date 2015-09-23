@@ -2,22 +2,22 @@ class CategoriesController < ApplicationController
 	 before_action :find_category, only: [:show, :edit, :update, :destroy]
 
 	def index
-		@flavors = Category.all
+		@categories = Category.all
 	end
 
 	def show
 	end
 
 	def new
-		@flavor = Category.new
+		@category = Category.new
 	end
 
 	def create
 
-		@flavor = Category.new(category_params)
+		@category = Category.new(category_params)
 
-		if @flavor.save
-			redirect_to @flavor
+		if @category.save
+			redirect_to @category
 		else
 			render 'new'
 		end
@@ -28,9 +28,9 @@ class CategoriesController < ApplicationController
 	end
 
 	def update
-		@flavor = Category.update_attributes(category_params)
+		@category = Category.update_attributes(category_params)
 
-		if @flavor.save
+		if @category.save
 			redirect 'show'
 		else
 			render 'new'
@@ -38,7 +38,7 @@ class CategoriesController < ApplicationController
 	end
 
 	def destroy
-		@flavor.destroy
+		@category.destroy
 	end
 
 	private
@@ -48,7 +48,7 @@ class CategoriesController < ApplicationController
 	end
 
 	def find_category
-		@flavor = Category.find(params[:id])
+		@category = Category.find(params[:id])
 	end
 
 

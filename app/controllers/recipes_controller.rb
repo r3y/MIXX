@@ -2,38 +2,37 @@ class RecipesController < ApplicationController
 	 before_action :find_recipe, only: [:show, :edit, :update, :destroy]
 
 	def index
-		@foods = Recipe.all
+		@recipes = Recipe.all
 	end
 
 	def show
 	end
 
 	def new
-		@food = Recipe.new
+		@recipe = Recipe.new
+		@category = Category.find(params[:category_id])
+		
 	end
 
 	def create
-		@category = Category.find(params[:id])
-		@food = Recipe.new(recipe_params)
+		@recipe = Recipe.new(recipe_params)
 
-		if @food.save
-			redirect_to @food
+		if @recipe.save
+			CategoryRecipe.create!(category_id: params[:category_id], recipe_id: @recipe.id) if params[:category_id] !=""
+			redirect_to @recipe
 		else
 			render 'new'
 		end
 
-		
-
-		
 	end
 
 	def edit
 	end
 
 	def update
-		@food = Recipe.update_attributes(recipe_params)
+		@recipe = Recipe.update_attributes(recipe_params)
 
-		if @food.save
+		if @recipe.save
 			redirect 'show'
 		else
 			render 'new'
@@ -41,7 +40,7 @@ class RecipesController < ApplicationController
 	end
 
 	def destroy
-		@food.destroy
+		@recipe.destroy
 	end
 
 	private
@@ -51,7 +50,7 @@ class RecipesController < ApplicationController
 	end
 
 	def find_recipe
-		@food = Recipe.find(params[:id])
+		@recipe = Recipe.find(params[:id])
 	end
 
 

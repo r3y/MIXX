@@ -33,3 +33,5 @@ Cut the tomatoes in halves or quarters. Add them to the liquid in the bowl. Fold
 Spoon some of the salsa mixture into each avocado half and finish with a little salt. Garnish with dollops of sour cream. Serve warm.')
 
 Recipe.create(title: 'Crab Tapenade', description: 'Delicious sweet Crab and Tapenade', ingredients: '1 Cup - Lump Crab Meat, 1/2 Cup - Tapenade', instructions: 'Mix Crab and Tapenade together in a bowl, Salt and Pepper to taste. ')
+
+CategoryRecipe.create!(category_id: 1, recipe_id: 1)
