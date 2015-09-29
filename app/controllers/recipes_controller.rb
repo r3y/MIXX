@@ -10,7 +10,7 @@ class RecipesController < ApplicationController
 
 	def new
 		@recipe = Recipe.new
-		@category = Category.find(params[:category_id])
+		@category = Category.find(params[:category_id]) if params[:category_id]
 		
 	end
 

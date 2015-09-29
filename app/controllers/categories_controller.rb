@@ -10,8 +10,8 @@ class CategoriesController < ApplicationController
 
 	def new
 		@category = Category.new
-		# @recipe = Recipe.find(params[:recipe_id])
-		
+		@recipe = Recipe.find(params[:recipe_id]) if params[:recipe_id]
+
 	end
 
 	def create

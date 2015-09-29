@@ -2,16 +2,17 @@
   <div class="row">
     <div class="col-xs-6">
       <h2><%= @category.title %></h2>
-      <p><%= @category.description %></p>
-      <img src="<%= @category.image%>" />
+      <!-- <p><%= @category.description %></p> -->
+      
     </div>
   </div>
   <div class="row">
     <h3>Recipes</h3>
     <% @category.recipes.each do |r| %>
       <h4><%= r.title %></h4>
-
+      
+      <a href="http://localhost:3000/recipes/1"><img src="<%= r.image%>" /></a>
     <% end %>
   </div>
-  <%= link_to 'Add Recipe', new_category_recipe_path(@category) %>
+  
 </div>

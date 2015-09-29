@@ -1,0 +1,41 @@
+
+<h1>Category Name</h1>
+
+
+
+<section id="categories">
+  <% @recipes.each_slice(2) do |recipe| %>
+    <div class="row">
+      <% recipe.each do |recipe| %>
+        <div id="recList" class="col s12" style="background: url('<%= recipe.image %>');">
+          <div class="recipe-content">
+            <h5><%= recipe.title %></h5>
+          </div>
+            
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</section>
+
+<div id="bottom-nav">
+  <div class="container">
+    <div class="row">
+      <div class="col s4">
+        <i class="large material-icons">back</i>
+      </div>
+      <div class="col s4">
+        <<i class="large material-icons">turned_in</i>
+      </div>
+      <div class="col s4">
+        <<i class="large material-icons">call_made</i>
+      </div>
+      <div class="col s4">
+        <<i class="large material-icons">popular</i>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
