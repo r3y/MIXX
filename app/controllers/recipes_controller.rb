@@ -2,7 +2,11 @@ class RecipesController < ApplicationController
 	 before_action :find_recipe, only: [:show, :edit, :update, :destroy]
 
 	def index
-		@recipes = Recipe.all
+		if params[:category_id]
+			@recipes = Category.find(params[:category_id]).recipes
+		else
+			@recipes = Recipe.all
+		end
 	end
 
 	def show
