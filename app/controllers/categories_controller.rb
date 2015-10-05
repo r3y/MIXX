@@ -55,3 +55,4 @@ class CategoriesController < ApplicationController
 
 
 end
+

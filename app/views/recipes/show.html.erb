@@ -1,0 +1,29 @@
+<div class="row">
+      
+    <div id="recipe" class="col s12" style="background: url('<%= @recipe.image %>');">
+      <div>
+        <h5><%= @recipe.title %></h5>
+      </div> 
+    </div>
+
+
+    <%= render 'meta' %>
+    
+    <div id="recipe-content" class="col s12"> 
+        <h5>Description</h5>
+          <%= @recipe.description %>
+        <h5>Ingredients</h5>
+          <ul>
+            <li><%= @recipe.ingredients %></li>
+          </ul>
+        <h5>Instructions</h5>
+        <%= @recipe.instructions %>
+    </div>
+
+    <%= render 'foot' %>
+
+    
+
+</div>
+  
+  <%= link_to 'Add to Category', new_category_recipe_path(@recipe) %>

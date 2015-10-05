@@ -6,6 +6,7 @@
 body {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
+  background: #FFF;
 }
 
 nav {
@@ -15,9 +16,15 @@ nav {
     font-family: 'Montserrat', sans-serif;
     // line-height: 29.5;
   }
-
 }
 
+#foot {
+ background: #333;  // bleeding into the rest of the app
+}
+
+#slide-out {
+  background: #F96332; // Orange
+}
 
 #second-nav {
   background: #4A4A4A;
@@ -55,13 +62,13 @@ nav {
   }
 }
 
-#recList {
+#rec {
   background-size: cover !important;
   background-repeat: none !important;
   padding: 80px 0px;
   position: relative;
   h5 {
-    height: 70px;
+    height: 50px;
     position: absolute;
     color: #FFF;
     top: 70%;
@@ -71,3 +78,43 @@ nav {
     font-size: 1.2rem;
   }
 }
+
+#meta {
+    // background: #ddd;  // bleeding into the rest of the app
+}
+
+#recipe {
+  background-size: cover !important;
+  background-repeat: none !important;
+  padding: 100px 0px;
+  position: relative;
+  h5 {
+    height: 50px;
+    position: absolute;
+    color: #FFF;
+    top: 70%;
+    left: 10%;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+  }
+}
+
+#recipe-content {
+  padding: 0 40px 10px 40px;
+  color: #888;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  text-align: justify;
+  line-height: 200%;
+  h5 {
+    height: 30px;
+    padding-top: 20px;
+    color: #FF7200;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+  }
+  
+}
+
+
