@@ -55,7 +55,27 @@ Recipe.create(title: 'Fonio',
 			  instructions: 'In a large pot of boiling, salted water, cook the plantains until very soft, 16 to 18 minutes. Drain the plantains, and then transfer to a large bowl. Add 1 tablespoon palm oil and mash the plantains until smooth.
 							Meanwhile, in a small saucepan, combine the fonio with 1⁄3 cup water, bring to a boil, and cook, covered, until tender, 2 minutes. Remove the fonio from the heat and let stand, covered, until tender, about 10 minutes. Add 1 tablespoon of the cooked fonio to the plantains along with the 1⁄2 teaspoon lime juice, the cilantro, onion, and egg and season with salt and pepper. Gently fold the crabmeat into the plantains, and then shape the dough into twelve 1-inch thick patties.
 							Sprinkle the flour over the remaining fonio and then dredge each crab cake in the fonio. Transfer the crab cakes to a baking sheet and refrigerate for at least 1 hour or up to 8 hours.')
-
+Recipe.create(title: 'Dan Dan Noodles',
+			  image: 'http://goldilocksfindsmanhattan.com/wp-content/uploads/2012/04/IMG_0720-500x333.jpg',
+			  description: 'Dandan noodles or dandanmian is a noodle dish originating from Chinese Sichuan cuisine. It consists of a spicy sauce containing preserved vegetables, chili oil, Sichuan pepper, minced pork, and scallions served over noodles.',
+ingredients: '8 ounces Shanghai-style noodles (cu mian) or udon
+2 tablespoons vegetable oil
+12 ounces ground pork
+Kosher salt and freshly ground black pepper
+2 tablespoons chopped peeled ginger
+3/4 cup chicken stock
+2 tablespoons (or less) chili oil
+2 tablespoons red wine vinegar
+2 tablespoons soy sauce
+4 teaspoons tahini (sesame seed paste)
+1 teaspoon Sichuan peppercorns
+Pinch of sugar
+2 tablespoons chopped roasted peanuts
+2 tablespoons thinly sliced scallions',
+instructions: 'Cook noodles in a large pot of boiling water until just tender but still firm to the bite. Drain; transfer to a large bowl of ice water and let stand until cold. Drain well and divide between 2 bowls.
+Heat vegetable oil in a medium skillet over medium heat. Add pork, season with salt and pepper, and stir, breaking up pork with a spoon, until halfway cooked, about 2 minutes. Add ginger; cook until pork is cooked through and lightly browned, about 2 minutes. Stir in chicken stock and next 6 ingredients; simmer until sauce thickens, about 7 minutes. Pour pork mixture over noodles; garnish with peanuts and scallions',
+servings: '2'
+	)
 
 
 CategoryRecipe.create!(category_id: 1, recipe_id: 1)

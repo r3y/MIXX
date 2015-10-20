@@ -1,7 +1,7 @@
 <nav>
 <a href="#" class="brand-logo center">CRAVE</a>
-  <ul id="slide-out" class="side-nav">
-    <li><a href="#!">Bookmarks <i class="small material-icons">turned_in</i></a></li>
+  <ul id="slide-out" class="side-nav right-align">
+    <li><a href="#!">Craves <i class="small material-icons">turned_in</i></a></li>
     <li><a href="#!">Recommended <i class="small material-icons">stars</i></a></li>
     <li><a href="#!">Profile <i class="small material-icons">perm_identity</i></a></li>
     <li><a href="#!">Settings<i class="small material-icons">settings</i></a></li>
@@ -9,13 +9,13 @@
   
   <a href="#"  data-activates="slide-out" class="button-collapse show-on-large"><i class="mdi-navigation-menu"></i></a>
   
-  <form>
+  <!-- <form>
     <div class="input-field">
       <input id="search" type="search" required>
       <label for="search"><i class="material-icons right">search</i></label>
       <i class="material-icons">close</i>
     </div>
-  </form>
+  </form> -->
     
 </nav>
 
@@ -44,7 +44,7 @@
           <div class="category-content">
             <h5><%= category.title %></h5>
           </div>
-            <!-- <span class="new badge"><%= category.title.length %></span> -->
+           <!-- <span class="new badge"><%= category.title.length %></span> -->
         </div>
       </a>
       <% end %>
@@ -52,3 +52,5 @@
     </div>
   <% end %>
 </section>
+
+<%= render 'foot' %>

@@ -1,11 +1,10 @@
-<div class="row">
+<div class="row" id="rec-container">
       
     <div id="recipe" class="col s12" style="background: url('<%= @recipe.image %>');">
       <div>
         <h5><%= @recipe.title %></h5>
-      </div> 
+      </div>
     </div>
-
 
     <%= render 'meta' %>
     
@@ -20,10 +19,12 @@
         <%= @recipe.instructions %>
     </div>
 
+<%= link_to 'Add a new recipe to this Category', new_category_recipe_path(@recipe) %>
+
     <%= render 'foot' %>
 
     
 
 </div>
   
-  <%= link_to 'Add to Category', new_category_recipe_path(@recipe) %>
+  
