@@ -3,6 +3,10 @@
     <div id="recipe" class="col s12" style="background: url('<%= @recipe.image %>');">
       <div>
         <h5><%= @recipe.title %></h5>
+        <% if current_user %>
+  <%= link_to "favorite",   favorite_recipe_path(@recipe, type: "favorite"), method: :put %>
+  <%= link_to "unfavorite", favorite_recipe_path(@recipe, type: "unfavorite"), method: :put %>
+<% end %>
       </div>
     </div>
 

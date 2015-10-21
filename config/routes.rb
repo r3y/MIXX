@@ -4,7 +4,9 @@ Rails.application.routes.draw do
     resources :recipes
   end
 
-  resources :recipes
+  resources :recipes do
+    put :favorite, on: :member
+  end
 
   root 'welcome#index'
 

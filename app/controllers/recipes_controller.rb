@@ -47,6 +47,15 @@ class RecipesController < ApplicationController
 		@recipe.destroy
 	end
 
+	def favorite
+		@recipe = Recipe.find(params[:id])
+		type = params[:type]
+		if type == 'favorite'
+			current_user.favorites << @recipe
+			redirect_to :back, notice: 'You favorited #{@recipe.name}'
+		end
+	end
+
 	private
 
 	def recipe_params
