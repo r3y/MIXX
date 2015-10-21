@@ -1,0 +1,7 @@
+<div class="container">
+  Email: <%= @user.email %>
+
+  Favorites: <% @user.favorites.each do |favorite| %>
+    <%= favorite.title %>
+    <% end %>
+</div>
