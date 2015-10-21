@@ -4,5 +4,8 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
          
-  has_many :favorites
+  has_many :recipes
+
+  has_many :favorite_recipes
+  has_many :favorites, through: :favorite_recipes, source: :recipe
 end
