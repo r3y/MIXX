@@ -15,7 +15,9 @@
     <% end %>
   </div>
 
- 
+  <div class="container">
 
-  <%= link_to 'Add a New Recipe to', new_category_recipe_path(@category) %> <%= @category.title %>
+    <%= link_to 'Add a New Recipe', new_category_recipe_path(@category), class: 'btn' %> 
+
+  </div>
 
