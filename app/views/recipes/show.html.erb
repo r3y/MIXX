@@ -1,22 +1,24 @@
 <div class="row" id="rec-container">
+
  
     <div id="recipe" class="col s12" style="background: url('<%= @recipe.image %>');">
-
-    <div id="crave" class="col s2 offset-s10"> <!-- Should only show single button, either on or off -->
-          <% if current_user %>
-            <% if current_user.favorites.include?(@recipe) %>
-               <%= link_to (image_tag("craved.png")),   favorite_recipe_path(@recipe, type: "unfavorite"), method: :put %>
+    <div class="container">
+      <div id="crave" class="col s2 offset-s10"> <!-- Should only show single button, either on or off -->
+            <% if current_user %>
+              <% if current_user.favorites.include?(@recipe) %>
+                 <%= link_to (image_tag("craved.png")),   favorite_recipe_path(@recipe, type: "unfavorite"), method: :put %>
+              <% else %>
+                <%= link_to (image_tag("bookmark.png")), favorite_recipe_path(@recipe, type: "favorite"), method: :put %>
+              <% end %>
             <% else %>
-              <%= link_to (image_tag("bookmark.png")), favorite_recipe_path(@recipe, type: "favorite"), method: :put %>
+              <%= link_to (image_tag("craved.png")), new_user_registration_path %>
             <% end %>
-          <% else %>
-            <%= link_to (image_tag("craved.png")), new_user_registration_path %>
-          <% end %>
-    </div>
+      </div>
 
-      <div>
-        <h5><%= @recipe.title %></h5>
-        
+        <div>
+          <h5><%= @recipe.title %></h5>
+          
+        </div>
       </div>
     </div>
 

@@ -7,6 +7,9 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   background: #FFF;
+
+  max-width: 400px;
+  margin: 0 auto;
 }
 
 nav {
@@ -20,10 +23,20 @@ nav {
 
 #crave {
   z-index: 1;
-  position: fixed;
-  top: 0;
+    position: fixed;
+    top: 0;
   h5 {
     background: rgba(0, 0, 0, 0.5);
+  }
+}
+
+@media (min-width: 401px) {
+  #crave {
+    max-width: 400px;
+    position: absolute;
+    top: 10%;
+    left: 0;
+
   }
 }
 
@@ -148,6 +161,7 @@ nav {
   height: 70px;
   background: #333;
   color: #fff;
+  max-width: 400px;
 }
 
 #foot_text{
