@@ -1,7 +1,13 @@
 Rails.application.routes.draw do
-  resources :recipes
-  resources :categories
-  resources :recipes
+  devise_for :users
+  resources :users, :only => [:show]
+  resources :categories do
+    resources :recipes
+  end
+
+  resources :recipes do
+    put :favorite, on: :member
+  end
 
   root 'welcome#index'
 

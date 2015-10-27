@@ -1,9 +1,15 @@
-<%= form_for @food do |f| %>
+<%= form_for([@category, @recipe]) do |f| %>
 	Title: <%= f.text_field :title %>
 	Description: <%= f.text_field :description %>
+	
 	Image: <%= f.text_field :image %>
 	Ingredients: <%= f.text_field :ingredients %>
 	Instructions: <%= f.text_field :instructions %>
-	<%= f.submit %>
+
+<%= f.submit 'Add Recipe', class: 'btn' %>
 <% end %>
+
+
+	
+    
 

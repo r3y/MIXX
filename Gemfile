@@ -6,7 +6,6 @@ gem 'pg'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
-gem 'turbolinks'
 
 
 # Use Unicorn as the app server
@@ -18,6 +17,7 @@ gem 'turbolinks'
 gem 'materialize-sass'
 gem 'haml'
 
+gem 'devise', '~> 3.5', '>= 3.5.2'
 
 group :development, :test do
 gem 'pry-byebug'

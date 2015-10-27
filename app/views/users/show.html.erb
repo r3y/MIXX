@@ -1,0 +1,48 @@
+
+<nav>
+<a href="#" class="brand-logo center"><%= image_tag("bookmark.png") %> My Craves / Profile</a>
+  
+  
+  
+  
+  <!-- <form>
+    <div class="input-field">
+      <input id="search" type="search" required>
+      <label for="search"><i class="material-icons right">search</i></label>
+      <i class="material-icons">close</i>
+    </div>
+  </form> -->
+    
+</nav>
+	
+
+<!-- if User isnt logged in, ask to sign in or sign up to save Craves -->
+
+
+
+<h5>Profile:</h5>
+  Email: <%= @user.email %>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+
+  <hr>
+
+
+  <h5>Craves:</h5>
+  <% @user.favorites.each do |favorite| %>
+  	<a href="/recipes/<%= favorite.id %>">
+          <div id="rec" class="col s12" style="background: url('<%= favorite.image %>');">
+            <div class="favorite-content">
+    		  <h5><%= favorite.title %></h5>
+    		</div>   
+          </div>
+        </a>
+
+
+    <% end %>
+
+
+
+
+
+

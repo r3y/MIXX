@@ -1,14 +1,50 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Mixx</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <title>CRAVE</title>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-
+	<!-- <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p> -->
 <%= yield %>
+
+<footer class="page-footer" id="foot">
+    <div class="row">
+      <div class="col s12">
+          <div class="container center">
+            <div class="row">
+              <div class="col s2"><%= link_to image_tag("home.png"), root_path %></div>
+              <div class="col s2"><a href="/users/1"><%= image_tag("bookmark.png") %></a></div>
+              <div class="col s2"><%= image_tag("share.png") %></div>
+              <div class="col s2"><%= image_tag("search.png") %></div>
+              
+
+
+              <div class="col s2">
+
+	              <ul id="slide-out" class="side-nav right-align">
+	                <li><a href="/users/1">Craves<%= image_tag("bookmark.png") %></a></li>
+	                <li><a href="#!">Recommended <i class="small material-icons">stars</i></a></li>
+	                <li><a href="#!">Profile <i class="small material-icons">perm_identity</i></a></li>
+	                <li><a href="#!">Settings<i class="small material-icons">settings</i></a></li>
+	              </ul>
+
+	              <a href="#"  data-activates="slide-out" class="small button-collapse show-on-large">
+	              	<%= image_tag("hamburger.png") %>
+	              </a>
+
+
+              </div>
+            </div>
+          </div>
+      </div>
+    
+</footer>
+
 
 </body>
 </html>

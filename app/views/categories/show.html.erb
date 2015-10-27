@@ -1,0 +1,23 @@
+<%= render 'nav' %>
+
+
+  <div class="row">
+    
+    <% @category.recipes.each do |recipe| %>
+      <a href="/recipes/<%= recipe.id %>">
+          <div id="rec" class="col s12" style="background: url('<%= recipe.image %>');">
+            <div class="recipe-content">
+              <h5><%= recipe.title %></h5>
+            </div>   
+          </div>
+        </a>
+
+    <% end %>
+  </div>
+
+  <div class="container">
+
+    <%= link_to 'Add a New Recipe', new_category_recipe_path(@category), class: 'btn' %> 
+
+  </div>
+
