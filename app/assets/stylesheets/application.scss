@@ -22,6 +22,9 @@ nav {
   z-index: 1;
   position: fixed;
   top: 0;
+  h5 {
+    background: rgba(0, 0, 0, 0.5);
+  }
 }
 
 #slide-out {
@@ -110,10 +113,12 @@ nav {
     position: absolute;
     color: #FFF;
     top: 70%;
-    left: 10%;
+    left: 0%;
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
     font-size: 1.2rem;
+    background: rgba(0, 0, 0, 0.5);
+    padding-left: 30px;
     
   }
 }

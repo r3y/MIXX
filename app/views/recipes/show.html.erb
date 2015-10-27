@@ -4,9 +4,13 @@
 
     <div id="crave" class="col s2 offset-s10"> <!-- Should only show single button, either on or off -->
           <% if current_user %>
-            <%= link_to (image_tag("craved.png")),   favorite_recipe_path(@recipe, type: "favorite"), method: :put %>
-
-            <%= link_to (image_tag("bookmark.png")), favorite_recipe_path(@recipe, type: "unfavorite"), method: :put %>
+            <% if current_user.favorites.include?(@recipe) %>
+               <%= link_to (image_tag("craved.png")),   favorite_recipe_path(@recipe, type: "unfavorite"), method: :put %>
+            <% else %>
+              <%= link_to (image_tag("bookmark.png")), favorite_recipe_path(@recipe, type: "favorite"), method: :put %>
+            <% end %>
+          <% else %>
+            <%= link_to (image_tag("craved.png")), new_user_registration_path %>
           <% end %>
     </div>
 
