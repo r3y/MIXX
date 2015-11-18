@@ -17,6 +17,7 @@ gem 'turbolinks'
 
 gem 'materialize-sass'
 gem 'haml'
+gem 'nested_form_fields'
 
 gem 'devise', '~> 3.5', '>= 3.5.2'
 

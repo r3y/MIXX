@@ -15,6 +15,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+//= require nested_form_fields
 
 $( document ).ready(function() {
   $('.button-collapse').sideNav({
@@ -24,3 +25,4 @@ $( document ).ready(function() {
     }
   );
 });
+

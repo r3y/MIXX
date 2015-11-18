@@ -4,8 +4,11 @@ class Recipe < ActiveRecord::Base
   
   belongs_to :user
 
-  has_many   :favorite_recipes
+  has_many :favorite_recipes
   has_many :favorited_by, through: :favorite_recipes, source: :user
+
+  accepts_nested_attributes_for :ingredients, reject_if: :all_blank, allow_destroy: true
+  accepts_nested_attributes_for :instructions, reject_if: :all_blank, allow_destroy: true
 
 
 end
