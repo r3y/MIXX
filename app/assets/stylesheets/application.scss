@@ -10,7 +10,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   background: #FFF;
-
+  height: 100%;
   max-width: 400px;
   margin: 0 auto;
 }
@@ -169,4 +169,15 @@ nav {
 
 #foot_text{
   z-index: 1;
+}
+
+
+#user {
+  header {
+    background: #333;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.1rem;
+    text-align: center;
+    color: #FFF;
+  }
 }
