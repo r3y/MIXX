@@ -14,6 +14,25 @@ body {
   max-width: 400px;
   margin: 0 auto;
 }
+.button {
+  text-decoration: none;
+  color: #fff;
+  background-color: #26a69a;
+  text-align: center;
+  letter-spacing: .5px;
+  -webkit-transition: 0.2s ease-out;
+  -moz-transition: 0.2s ease-out;
+  -o-transition: 0.2s ease-out;
+  -ms-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
+  cursor: pointer;
+}
+/* line 50, /Users/vivekpoola/.rvm/gems/ruby-2.2.1/gems/materialize-sass-0.97.0/app/assets/stylesheets/materialize/components/_buttons.scss */
+.button:hover {
+  background-color: #2bbbad;
+}
+
+
 
 nav {
   background: #3D3D3D;
