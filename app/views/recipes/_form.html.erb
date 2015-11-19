@@ -5,19 +5,11 @@
 	Image: <%= f.text_field :image %>
 
 
-	
-
-
-		
-
-	
-
-
-
-
-        
-
-
+Ingredients:
+	<%= f.nested_fields_for :ingredients do |ff| %>
+          <%= ff.remove_nested_fields_link %>
+          <%= ff.text_field :name %>
+    <%= f.add_nested_fields_link :ingredients, 'Add Ingredient', class: "btn", role: "button" %>
 
 
 <%= f.submit 'Add Recipe', class: 'btn' %>
