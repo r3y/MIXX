@@ -17,8 +17,8 @@ gem 'jquery-rails'
 gem 'materialize-sass'
 gem 'haml'
 gem 'nested_form_fields'
-
 gem 'devise', '~> 3.5', '>= 3.5.2'
+gem 'coffee-rails'
 
 group :development, :test do
 gem 'pry-byebug'
