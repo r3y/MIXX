@@ -1,6 +1,6 @@
 class CreateInstructions < ActiveRecord::Migration
   def change
-    create_table :directions do |t|
+    create_table :instructions do |t|
       t.text :step
       t.belongs_to :recipe, index: true, foreign_key: true
 

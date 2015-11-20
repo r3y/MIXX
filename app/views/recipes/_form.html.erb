@@ -19,6 +19,17 @@
     </div>
   </div>
   <div class="row">
+    <div class="col s6 center-align">
+      <div class="nested">
+        <%= f.nested_fields_for :instructions do |ff| %>
+          <%= ff.remove_nested_fields_link %>
+          <%= ff.text_field :step %>
+        <% end %>
+        <%= f.add_nested_fields_link :instructions, "Add Instruction", class: 'button' %>
+      </div>
+    </div>
+  </div>
+  <div class="row">
     <div class="col s12 center-align">
       <br/>
       <br/>
