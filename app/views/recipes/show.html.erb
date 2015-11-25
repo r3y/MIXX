@@ -33,6 +33,11 @@
             <%= ingredient.name %>
           <% end %>
 
+        <h5>Instructions</h5>
+          <% @recipe.instructions.each do |instruction| %>
+            <%= instruction.step %>
+          <% end %>
+
 
     </div>
 
