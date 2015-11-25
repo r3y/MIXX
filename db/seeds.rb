@@ -33,3 +33,15 @@ Recipe.create(title: 'Dan Dan Noodles',
 CategoryRecipe.create!(category_id: 1, recipe_id: 1)
 
 User.create!(email:'john@gmail.com', password:'topsecret', password_confirmation:'topsecret')
+
+
+# I can see that there are 4 recipes here - so I'm going to drop the database and when I seed, this new recipe will have a recipe_id of 5
+
+Recipe.create(title: 'Test Recipe',
+        image: 'test image',
+        description: 'test description for the test recipe')
+
+# now I will create the ingredient and assign it to the above recipe (id 5)
+
+Ingredient.create(name: 'Test ingredient', recipe_id: 5)
+
