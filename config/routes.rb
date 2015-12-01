@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :admins
   devise_for :users
   resources :users, :only => [:show]
   resources :categories do
@@ -10,5 +11,7 @@ Rails.application.routes.draw do
   end
 
   root 'welcome#index'
+
+ 
 
 end
